@@ -114,7 +114,7 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
                 <div class="mb-12 lg:mb-0 relative">
                     <div class="aspect-w-4 aspect-h-3 bg-blue-100 rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tim Xgrow Studio" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500">
+                        <img src="{{ asset('Foto/kokoh.png') }}" alt="Tim Xgrow Studio" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500">
                     </div>
                     <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl hidden md:block">
                         <p class="text-4xl font-extrabold">5+</p>
@@ -341,7 +341,7 @@
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Pertanyaan Umum (FAQ)</h2>
                 <p class="mt-4 text-lg text-gray-600">Jawaban cepat untuk pertanyaan yang sering diajukan klien kami.</p>
             </div>
-            
+
             <div class="space-y-4">
                 <div x-data="{ expanded: false }" class="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <button @click="expanded = !expanded" class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none">
@@ -386,7 +386,7 @@
                     <div class="relative z-10">
                         <h3 class="text-3xl font-bold mb-4">Mari Berdiskusi</h3>
                         <p class="text-blue-200 mb-8">Ceritakan ide Anda, dan tim kami akan merumuskan solusi teknis terbaik untuk mewujudkannya.</p>
-                        
+
                         <div class="space-y-6">
                             <div class="flex items-center">
                                 <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center mr-4">
@@ -491,7 +491,7 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 Xgrow Studio. All rights reserved.</p>
                 <div class="flex space-x-4 text-sm text-gray-500">
