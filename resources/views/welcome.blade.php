@@ -126,34 +126,39 @@
             @scroll.window="scrolled = window.scrollY > 50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20 transition-all duration-300"
-                 :class="scrolled ? 'bg-white/90 backdrop-blur-md shadow-md shadow-primary/10 rounded-b-2xl px-4' : ''">
+                 :class="scrolled ? 'bg-white/95 backdrop-blur-md shadow-md shadow-primary/10 rounded-b-2xl px-4' : ''">
 
                 <a href="#beranda" class="flex items-center gap-2 group">
                     <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <span class="text-white font-heading text-lg leading-none">X</span>
                     </div>
-                    <span class="font-heading text-2xl tracking-widest text-navy">XGROW <span class="text-primary">STUDIO</span></span>
+                    <span class="font-heading text-2xl tracking-widest transition-colors duration-300"
+                          :class="scrolled ? 'text-navy' : 'text-white'">
+                        XGROW <span class="text-primary" style="color:#6B7FFF" :style="scrolled ? 'color:#241C86' : 'color:#6B7FFF'">STUDIO</span>
+                    </span>
                 </a>
 
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="#beranda"  class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Beranda</a>
-                    <a href="#layanan"  class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Layanan</a>
-                    <a href="#karya"    class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Karya Kami</a>
-                    <a href="#tech"     class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Tech Stack</a>
-                    <a href="#tentang"  class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Tentang</a>
-                    <a href="#tim"      class="text-sm font-medium text-muted hover:text-primary transition-colors duration-200">Tim</a>
+                    <a href="#beranda"  class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Beranda</a>
+                    <a href="#layanan"  class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Layanan</a>
+                    <a href="#karya"    class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Karya Kami</a>
+                    <a href="#tech"     class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Tech Stack</a>
+                    <a href="#tentang"  class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Tentang</a>
+                    <a href="#tim"      class="text-sm font-medium transition-colors duration-200 hover:text-primary" :class="scrolled ? 'text-muted' : 'text-white/70 hover:text-white'">Tim</a>
                 </div>
 
                 <div class="hidden lg:flex items-center gap-3">
-                    <a href="#kontak" class="px-5 py-2.5 rounded-lg border border-primary text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-all duration-200">
+                    <a href="#kontak" class="px-5 py-2.5 rounded-lg border text-sm font-semibold transition-all duration-200"
+                       :class="scrolled ? 'border-primary text-primary hover:bg-primary hover:text-white' : 'border-white/30 text-white hover:bg-white/10'">
                         Hubungi Kami
                     </a>
-                    <a href="#kontak" class="px-5 py-2.5 rounded-lg bg-primary text-sm font-semibold text-white hover:bg-navy transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-navy/20">
+                    <a href="#kontak" class="px-5 py-2.5 rounded-lg bg-primary text-sm font-semibold text-white hover:bg-white hover:text-primary transition-all duration-200 shadow-lg shadow-primary/30">
                         Mulai Proyek
                     </a>
                 </div>
 
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 text-muted hover:text-primary transition-colors">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 transition-colors"
+                        :class="scrolled ? 'text-muted hover:text-primary' : 'text-white/70 hover:text-white'">
                     <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -185,65 +190,66 @@
     </header>
 
     {{-- ===== HERO ===== --}}
-    <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-soft">
+    <section id="beranda" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-navy">
         {{-- Floating orbs --}}
-        <div class="orb w-[480px] h-[480px] bg-primary/15 -top-40 -left-40 animate-float-slow"></div>
-        <div class="orb w-72 h-72 bg-primary/10 bottom-10 right-0 animate-float"></div>
+        <div class="orb w-[520px] h-[520px] bg-primary/40 -top-40 -left-40 animate-float-slow"></div>
+        <div class="orb w-80 h-80 bg-primary/25 bottom-10 right-0 animate-float"></div>
+        <div class="orb w-48 h-48 bg-blue-500/15 top-1/3 right-1/4 animate-float-slow" style="animation-delay:2s"></div>
 
-        {{-- Dot grid --}}
-        <div class="absolute inset-0 opacity-[0.05]"
-             style="background-image: radial-gradient(#241C86 1.5px, transparent 1.5px); background-size: 28px 28px;"></div>
+        {{-- Grid texture --}}
+        <div class="absolute inset-0 opacity-[0.07]"
+             style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 50px 50px;"></div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
             <div class="max-w-4xl">
                 {{-- Badge --}}
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in" style="animation-delay:0.1s">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-xs font-semibold text-primary tracking-widest uppercase">Digital Agency untuk UMKM Lokal</span>
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 animate-fade-in" style="animation-delay:0.1s">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span class="text-xs font-semibold text-white/80 tracking-widest uppercase">Digital Agency untuk UMKM Lokal</span>
                 </div>
 
                 {{-- Headline --}}
-                <h1 class="font-heading leading-none tracking-wider text-navy mb-6 animate-fade-up" style="animation-delay:0.2s; font-size: clamp(3.5rem, 10vw, 7rem);">
+                <h1 class="font-heading leading-none tracking-wider text-white mb-6 animate-fade-up" style="animation-delay:0.2s; font-size: clamp(3.5rem, 10vw, 7rem);">
                     HERE WE ARE.<br>
-                    <span class="text-primary">HERE WE GROW.</span>
+                    <span class="text-primary" style="color: #6B7FFF;">HERE WE GROW.</span>
                 </h1>
 
-                <p class="text-sm sm:text-base text-muted max-w-2xl mb-10 leading-relaxed animate-fade-up" style="animation-delay:0.4s">
+                <p class="text-sm sm:text-base text-white/60 max-w-2xl mb-10 leading-relaxed animate-fade-up" style="animation-delay:0.4s">
                     XGROW STUDIO hadir sebagai mitra pertumbuhan digital UMKM lokal. Kami bantu bisnismu tumbuh lewat solusi web, mobile app, dan desain produk yang tepat sasaran.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 animate-fade-up" style="animation-delay:0.55s">
                     <a href="#kontak"
-                       class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary rounded-xl font-semibold text-white hover:bg-navy transition-all duration-300 shadow-xl shadow-primary/25 hover:shadow-navy/20 hover:-translate-y-1 text-sm">
+                       class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary rounded-xl font-semibold text-white hover:bg-white hover:text-primary transition-all duration-300 shadow-xl shadow-primary/40 hover:-translate-y-1 text-sm">
                         Konsultasi Gratis
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                     </a>
                     <a href="#karya"
-                       class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-navy/20 rounded-xl font-semibold text-navy hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-300 text-sm">
+                       class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 rounded-xl font-semibold text-white hover:border-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 text-sm">
                         Lihat Karya Kami
                     </a>
                 </div>
 
                 {{-- Stats --}}
-                <div class="mt-16 pt-10 border-t border-lgray grid grid-cols-3 gap-8 max-w-sm animate-fade-up" style="animation-delay:0.7s">
+                <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-3 gap-8 max-w-sm animate-fade-up" style="animation-delay:0.7s">
                     <div>
-                        <p class="font-heading text-4xl text-primary">20+</p>
-                        <p class="text-xs text-muted mt-1">Proyek Selesai</p>
+                        <p class="font-heading text-4xl text-white">20+</p>
+                        <p class="text-xs text-white/50 mt-1">Proyek Selesai</p>
                     </div>
                     <div>
-                        <p class="font-heading text-4xl text-primary">15+</p>
-                        <p class="text-xs text-muted mt-1">Klien Puas</p>
+                        <p class="font-heading text-4xl text-white">15+</p>
+                        <p class="text-xs text-white/50 mt-1">Klien Puas</p>
                     </div>
                     <div>
-                        <p class="font-heading text-4xl text-primary">4</p>
-                        <p class="text-xs text-muted mt-1">Tim Profesional</p>
+                        <p class="font-heading text-4xl text-white">4</p>
+                        <p class="text-xs text-white/50 mt-1">Tim Profesional</p>
                     </div>
                 </div>
             </div>
         </div>
 
         {{-- Scroll indicator --}}
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted animate-bounce">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40 animate-bounce">
             <span class="text-xs tracking-widest uppercase">Scroll</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </div>
