@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XGROW STUDIO | Here We Are. Here We Grow.</title>
-    <meta name="description" content="XGROW STUDIO — Solusi digital untuk UMKM lokal. Web Dev, Mobile App, UI/UX Design, Digital Product.">
+    <meta name="description" content="XGROW STUDIO â€” Solusi digital untuk UMKM lokal. Web Dev, Mobile App, UI/UX Design, Digital Product.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="{{ asset('logo-vertical-white.png') }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -259,7 +260,7 @@
                 <p class="text-xs font-semibold text-primary uppercase tracking-[0.2em] mb-3" data-reveal>Apa yang Kami Tawarkan</p>
                 <h2 class="font-heading text-5xl lg:text-7xl text-navy" data-reveal>LAYANAN KAMI</h2>
                 <p class="mt-4 text-muted max-w-xl mx-auto text-sm leading-relaxed" data-reveal>
-                    Dari ide hingga produk digital yang siap pakai — kami hadir di setiap tahap perjalanan bisnismu.
+                    Dari ide hingga produk digital yang siap pakai â€” kami hadir di setiap tahap perjalanan bisnismu.
                 </p>
             </div>
 
@@ -300,7 +301,7 @@
                         </svg>
                     </div>
                     <h3 class="font-heading text-2xl text-navy mb-3 tracking-wider">UI/UX DESIGN</h3>
-                    <p class="text-muted text-sm leading-relaxed">Desain antarmuka yang intuitif dan memukau — dari wireframe hingga high-fidelity prototype di Figma.</p>
+                    <p class="text-muted text-sm leading-relaxed">Desain antarmuka yang intuitif dan memukau â€” dari wireframe hingga high-fidelity prototype di Figma.</p>
                     <div class="mt-6 pt-4 border-t border-lgray flex gap-2 flex-wrap">
                         <span class="text-xs px-2 py-1 rounded-md bg-primary/10 text-primary font-medium">Figma</span>
                         <span class="text-xs px-2 py-1 rounded-md bg-primary/10 text-primary font-medium">Prototyping</span>
@@ -314,7 +315,7 @@
                         </svg>
                     </div>
                     <h3 class="font-heading text-2xl text-white mb-3 tracking-wider">DIGITAL PRODUCT</h3>
-                    <p class="text-white/80 text-sm leading-relaxed">Pengembangan produk digital end-to-end — dari konsep, MVP, hingga produk siap pasar yang scalable.</p>
+                    <p class="text-white/80 text-sm leading-relaxed">Pengembangan produk digital end-to-end â€” dari konsep, MVP, hingga produk siap pasar yang scalable.</p>
                     <div class="mt-6 pt-4 border-t border-white/20 flex gap-2 flex-wrap">
                         <span class="text-xs px-2 py-1 rounded-md bg-white/20 text-white font-medium">MVP</span>
                         <span class="text-xs px-2 py-1 rounded-md bg-white/20 text-white font-medium">SaaS</span>
@@ -389,37 +390,72 @@
             </div>
 
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-                @php
-                $techs = [
-                    ['label' => 'Laravel',       'initial' => 'L',   'color' => 'text-red-600',    'bg' => 'bg-red-50',     'delay' => '0ms'],
-                    ['label' => 'React',         'initial' => 'R',   'color' => 'text-cyan-600',   'bg' => 'bg-cyan-50',    'delay' => '60ms'],
-                    ['label' => 'React Native',  'initial' => 'RN',  'color' => 'text-blue-600',   'bg' => 'bg-blue-50',    'delay' => '120ms'],
-                    ['label' => 'Tailwind CSS',  'initial' => 'TW',  'color' => 'text-teal-600',   'bg' => 'bg-teal-50',    'delay' => '180ms'],
-                    ['label' => 'Figma',         'initial' => 'F',   'color' => 'text-purple-600', 'bg' => 'bg-purple-50',  'delay' => '240ms'],
-                    ['label' => 'MySQL',         'initial' => 'DB',  'color' => 'text-orange-600', 'bg' => 'bg-orange-50',  'delay' => '300ms'],
-                    ['label' => 'PHP',           'initial' => 'PHP', 'color' => 'text-indigo-600', 'bg' => 'bg-indigo-50',  'delay' => '360ms'],
-                    ['label' => 'JavaScript',    'initial' => 'JS',  'color' => 'text-yellow-600', 'bg' => 'bg-yellow-50',  'delay' => '420ms'],
-                    ['label' => 'Expo',          'initial' => 'EX',  'color' => 'text-gray-600',   'bg' => 'bg-gray-100',   'delay' => '480ms'],
-                    ['label' => 'Git',           'initial' => 'G',   'color' => 'text-red-700',    'bg' => 'bg-red-50',     'delay' => '540ms'],
-                    ['label' => 'REST API',      'initial' => 'API', 'color' => 'text-green-600',  'bg' => 'bg-green-50',   'delay' => '600ms'],
-                    ['label' => 'Node.js',       'initial' => 'N',   'color' => 'text-lime-600',   'bg' => 'bg-lime-50',    'delay' => '660ms'],
-                ];
-                @endphp
 
-                @foreach($techs as $tech)
-                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default"
-                     data-reveal-scale style="transition-delay: {{ $tech['delay'] }}">
-                    <div class="w-10 h-10 rounded-xl {{ $tech['bg'] }} flex items-center justify-center">
-                        <span class="font-heading text-xs tracking-wider {{ $tech['color'] }}">{{ $tech['initial'] }}</span>
-                    </div>
-                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">{{ $tech['label'] }}</span>
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale>
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#ff2d20" d="M98.494 22.485q.054.2.054.406v21.335a1.56 1.56 0 0 1-.782 1.349L79.86 55.885v20.433a1.56 1.56 0 0 1-.777 1.35L41.705 99.184c-.085.049-.179.08-.272.113-.035.012-.068.033-.105.043a1.6 1.6 0 0 1-.797 0c-.043-.012-.082-.035-.123-.05-.085-.032-.175-.059-.256-.106L2.782 77.668A1.56 1.56 0 0 1 2 76.318V12.316q.001-.21.055-.409c.011-.044.039-.085.054-.13.03-.082.057-.165.1-.241.028-.05.071-.091.106-.138.045-.062.086-.127.138-.18.045-.046.103-.079.154-.118.056-.046.107-.097.171-.134h.002L21.466.208a1.56 1.56 0 0 1 1.555 0l18.686 10.758h.004c.062.04.115.088.171.133.05.038.107.073.152.116.054.056.093.12.14.183.033.047.078.087.105.138.044.078.07.16.1.241.017.045.044.086.055.132q.054.2.055.407V52.29l15.57-8.966V22.89c0-.136.02-.274.055-.404.014-.047.039-.087.055-.132.03-.082.058-.166.1-.241.03-.05.073-.092.106-.138.046-.063.085-.127.14-.181.044-.045.1-.078.151-.117.059-.047.11-.097.171-.134h.002l18.688-10.759a1.56 1.56 0 0 1 1.556 0l18.686 10.759c.066.039.116.087.174.132.05.04.106.074.15.117.055.056.093.12.14.183.035.046.078.087.105.138.045.076.07.16.101.24.018.046.043.086.055.133m-3.06 20.84v-17.74l-6.54 3.764-9.034 5.201v17.74l15.575-8.965zM76.746 75.418V57.665l-8.885 5.075-25.375 14.482v17.92zM5.115 15.008v60.41L39.372 95.14V77.224L21.476 67.096l-.006-.004-.008-.004c-.06-.035-.11-.086-.167-.128-.049-.04-.105-.07-.148-.113l-.004-.006c-.05-.049-.085-.109-.128-.163-.04-.053-.086-.097-.117-.152l-.002-.006c-.035-.058-.056-.128-.082-.194-.025-.059-.058-.113-.073-.175v-.002c-.02-.074-.024-.152-.032-.228-.007-.058-.023-.116-.023-.175V23.974l-9.032-5.203-6.539-3.76zm17.13-11.654L6.678 12.316l15.565 8.962 15.567-8.964-15.567-8.96zm8.097 55.93 9.032-5.2V15.009l-6.54 3.764-9.033 5.201V63.05zM78.305 13.93l-15.567 8.96 15.567 8.962L93.87 22.89zm-1.558 20.62-9.033-5.201-6.54-3.765v17.741l9.032 5.2 6.541 3.766zm-35.82 39.98 22.834-13.036 11.413-6.514-15.555-8.956-17.91 10.311-16.323 9.398z"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Laravel</span>
                 </div>
-                @endforeach
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:60ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#673ab8" d="m50.302 0 43.302 25v50l-43.302 25L7 75V25z"/><path fill="#fff" d="M18.795 74.587c5.756 7.368 24.05 1.754 41.322-11.74S87.262 32.96 81.506 25.59s-24.051-1.754-41.323 11.74-27.145 29.89-21.388 37.258m2.459-1.922c-1.91-2.443-1.075-7.24 2.562-13.28 3.83-6.358 10.332-13.378 18.288-19.594 7.957-6.216 16.34-10.827 23.438-13.005 6.739-2.068 11.595-1.717 13.504.727 1.91 2.443 1.075 7.24-2.562 13.28-3.83 6.358-10.331 13.378-18.288 19.594S41.856 71.214 34.76 73.392c-6.74 2.068-11.596 1.717-13.505-.727"/><path fill="#fff" d="M81.506 74.587c5.757-7.368-4.117-23.761-21.389-37.256-17.271-13.494-35.566-19.108-41.322-11.74s4.116 23.761 21.388 37.255 35.566 19.109 41.323 11.74m-2.46-1.922c-1.909 2.444-6.765 2.795-13.504.727-7.097-2.178-15.481-6.788-23.437-13.005-7.957-6.216-14.46-13.236-18.289-19.595-3.637-6.039-4.471-10.835-2.562-13.28 1.91-2.443 6.765-2.794 13.504-.726 7.097 2.178 15.481 6.789 23.438 13.005s14.458 13.236 18.288 19.595c3.638 6.038 4.472 10.835 2.562 13.279"/><path fill="#fff" d="M50.15 56.72a6.632 6.632 0 1 0 0-13.262 6.632 6.632 0 0 0 0 13.263"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">React</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:120ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#61dafb" d="M29.66 5.418c-1.656.056-3.234.46-4.66 1.281-2.85 1.645-4.552 4.664-5.316 8.237s-.684 7.822.078 12.578c.293 1.834.723 3.762 1.22 5.733-1.955.554-3.84 1.148-5.575 1.81-4.5 1.72-8.219 3.774-10.931 6.223C1.763 43.73 0 46.71 0 50s1.763 6.274 4.476 8.722c2.712 2.45 6.43 4.505 10.93 6.224 1.735.662 3.62 1.255 5.575 1.81-.497 1.971-.926 3.9-1.22 5.732-.762 4.758-.84 9.006-.077 12.578.766 3.574 2.465 6.592 5.315 8.238s6.313 1.61 9.79.484c3.477-1.125 7.117-3.318 10.856-6.356 1.44-1.17 2.896-2.505 4.355-3.922 1.458 1.417 2.914 2.751 4.355 3.922 3.737 3.039 7.376 5.232 10.854 6.357 3.476 1.125 6.941 1.16 9.791-.484 2.85-1.647 4.552-4.665 5.316-8.238s.682-7.822-.08-12.578c-.293-1.834-.721-3.762-1.218-5.733 1.955-.555 3.84-1.148 5.575-1.81 4.5-1.718 8.219-3.773 10.931-6.223 2.713-2.449 4.476-5.432 4.476-8.722 0-3.291-1.763-6.272-4.476-8.72-2.712-2.45-6.431-4.505-10.931-6.223-1.734-.662-3.618-1.257-5.574-1.811.497-1.971.925-3.9 1.22-5.733.761-4.756.84-9.005.076-12.578C79.55 11.362 77.85 8.344 75 6.699s-6.312-1.61-9.79-.484c-3.476 1.125-7.117 3.318-10.855 6.356-1.44 1.172-2.899 2.506-4.357 3.923-1.459-1.416-2.914-2.752-4.355-3.923-3.737-3.038-7.374-5.233-10.85-6.358-1.74-.562-3.476-.851-5.134-.797zm.2 4.332c1.04-.03 2.23.162 3.594.601 2.727.883 5.996 2.79 9.448 5.594 1.33 1.08 2.69 2.33 4.06 3.664-2.863 3.094-5.702 6.612-8.449 10.496-4.736.437-9.203 1.137-13.315 2.07-.468-1.855-.871-3.656-1.143-5.35-.703-4.39-.718-8.175-.118-10.978.599-2.803 1.72-4.506 3.237-5.382.759-.437 1.647-.687 2.686-.715m40.28 0c1.04.029 1.928.277 2.687.715 1.517.875 2.638 2.579 3.237 5.38.6 2.803.586 6.59-.117 10.98-.271 1.692-.674 3.496-1.143 5.349-4.111-.932-8.578-1.633-13.317-2.07-2.746-3.882-5.587-7.401-8.45-10.496 1.37-1.333 2.733-2.584 4.062-3.664 3.452-2.806 6.721-4.709 9.449-5.592 1.363-.44 2.554-.631 3.593-.601zM50 22.737a97 97 0 0 1 5.813 6.973c-1.91-.086-3.842-.144-5.813-.144s-3.902.057-5.812.144A96 96 0 0 1 50 22.736m0 11.178c3.113 0 6.148.122 9.09.343a121 121 0 0 1 4.842 7.698A121 121 0 0 1 68.177 50a121 121 0 0 1-4.245 8.043 121 121 0 0 1-4.844 7.7c-2.94.22-5.975.344-9.087.344q-4.553 0-9.092-.344a121 121 0 0 1-4.842-7.7 121 121 0 0 1-4.245-8.042 121 121 0 0 1 4.247-8.044 121 121 0 0 1 4.843-7.7q4.538-.343 9.088-.343m-14.666.908a128 128 0 0 0-3.032 4.961 128 128 0 0 0-2.78 5.105 97 97 0 0 1-3.135-8.52 97 97 0 0 1 8.947-1.546m29.333 0q4.51.562 8.947 1.546a97 97 0 0 1-3.134 8.521 128 128 0 0 0-2.782-5.107 128 128 0 0 0-3.03-4.96m-42.507 2.61C23.41 41.46 25.036 45.68 27.027 50c-1.992 4.322-3.617 8.542-4.867 12.569-1.84-.52-3.601-1.074-5.203-1.685-4.155-1.586-7.44-3.467-9.569-5.389-2.127-1.92-3.041-3.742-3.041-5.494s.914-3.572 3.041-5.492c2.128-1.922 5.414-3.803 9.569-5.389 1.602-.611 3.363-1.166 5.203-1.686m55.68 0c1.84.52 3.603 1.075 5.203 1.688 4.156 1.586 7.441 3.465 9.57 5.387 2.127 1.921 3.04 3.742 3.04 5.493s-.913 3.574-3.04 5.494c-2.129 1.922-5.415 3.802-9.57 5.388-1.6.611-3.364 1.164-5.204 1.685-1.248-4.026-2.875-8.245-4.865-12.566 1.992-4.322 3.617-8.541 4.866-12.569M50 41.088a8.914 8.914 0 0 0 0 17.825 8.914 8.914 0 0 0 0-17.825m20.48 14.024a97 97 0 0 1 3.132 8.522 97 97 0 0 1-8.943 1.547 128 128 0 0 0 3.029-4.963q1.448-2.52 2.782-5.106m-40.959.002a128 128 0 0 0 2.781 5.104 130 130 0 0 0 3.032 4.962 96 96 0 0 1-8.947-1.546 97 97 0 0 1 3.134-8.52m-4.324 12.715c4.11.931 8.578 1.63 13.316 2.067 2.747 3.885 5.588 7.404 8.45 10.5-1.37 1.332-2.73 2.582-4.06 3.664-3.451 2.805-6.724 4.71-9.451 5.594-2.727.881-4.762.76-6.28-.116-1.517-.876-2.636-2.578-3.235-5.38-.6-2.803-.585-6.589.118-10.982.272-1.691.672-3.494 1.142-5.347m49.605 0c.47 1.853.872 3.656 1.143 5.347.703 4.393.72 8.179.12 10.982s-1.721 4.505-3.238 5.382c-1.518.875-3.552.995-6.28.112-2.727-.883-5.996-2.789-9.448-5.594-1.329-1.08-2.69-2.33-4.06-3.664 2.863-3.093 5.702-6.614 8.448-10.498 4.737-.437 9.204-1.136 13.315-2.067M44.187 70.29q2.905.14 5.814.145 2.909-.006 5.814-.145A96 96 0 0 1 50 77.268a96 96 0 0 1-5.813-6.977"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">React Native</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:180ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#06b6d4" d="M50 20q-20 0-25 19.994 7.5-9.997 17.5-7.498c3.804.95 6.522 3.71 9.532 6.764 4.902 4.974 10.576 10.731 22.969 10.731q20 0 24.999-19.995-7.5 9.997-17.5 7.5c-3.803-.951-6.521-3.71-9.531-6.765C68.067 25.758 62.392 20 50 20M25 49.991q-20 0-25 19.995 7.5-9.998 17.5-7.498c3.803.952 6.522 3.71 9.532 6.763C31.933 74.225 37.608 79.984 50 79.984q20 0 25-19.995-7.5 9.997-17.5 7.498c-3.803-.95-6.522-3.71-9.532-6.763C43.066 55.75 37.393 49.991 25 49.991"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Tailwind CSS</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:240ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#0acf83" d="M33.333 100C42.533 100 50 92.533 50 83.333V66.667H33.333c-9.2 0-16.666 7.466-16.666 16.666S24.133 100 33.333 100"/><path fill="#a259ff" d="M16.667 50c0-9.2 7.466-16.667 16.666-16.667H50v33.334H33.333c-9.2 0-16.666-7.467-16.666-16.667"/><path fill="#f24e1e" d="M16.667 16.667C16.667 7.467 24.133 0 33.333 0H50v33.333H33.333c-9.2 0-16.666-7.466-16.666-16.666"/><path fill="#ff7262" d="M50 0h16.667c9.2 0 16.666 7.467 16.666 16.667s-7.466 16.666-16.666 16.666H50z"/><path fill="#1abcfe" d="M83.333 50c0 9.2-7.466 16.667-16.666 16.667S50 59.2 50 50s7.467-16.667 16.667-16.667S83.333 40.8 83.333 50"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Figma</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:300ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g fill="#00546b" clip-path="url(#a)"><path d="M92.11 77.066c-5.44-.137-9.657.415-13.194 1.934-1.02.413-2.653.414-2.789 1.726.544.552.612 1.45 1.089 2.209.817 1.38 2.244 3.245 3.536 4.212 1.428 1.104 2.857 2.208 4.353 3.175 2.652 1.657 5.645 2.623 8.23 4.28 1.497.966 2.992 2.21 4.488 3.245.749.552 1.224 1.45 2.177 1.795v-.207c-.477-.622-.613-1.519-1.088-2.21-.68-.69-1.36-1.311-2.04-2.002-1.973-2.692-4.421-5.04-7.074-6.972-2.176-1.52-6.938-3.59-7.821-6.145 0 0-.069-.068-.136-.137 1.496-.138 3.264-.69 4.693-1.105 2.312-.622 4.42-.484 6.8-1.105 1.089-.276 2.177-.621 3.265-.967v-.62c-1.224-1.243-2.108-2.9-3.4-4.074-3.469-3.038-7.278-6.007-11.222-8.492-2.11-1.38-4.83-2.278-7.074-3.452-.816-.414-2.176-.621-2.652-1.312-1.225-1.518-1.905-3.52-2.789-5.315-1.972-3.798-3.877-8.009-5.577-12.013-1.224-2.692-1.972-5.385-3.469-7.87-7.005-11.737-14.622-18.848-26.32-25.82-2.517-1.45-5.51-2.072-8.706-2.83-1.7-.07-3.4-.208-5.1-.278-1.09-.483-2.178-1.794-3.13-2.416C13.284 1.815 3.286-3.57.43 3.541c-1.837 4.487 2.72 8.906 4.284 11.184 1.157 1.588 2.652 3.383 3.469 5.178.476 1.173.611 2.417 1.088 3.66 1.088 3.036 2.108 6.42 3.537 9.25.748 1.45 1.564 2.969 2.516 4.28.544.76 1.496 1.105 1.7 2.348-.951 1.38-1.02 3.452-1.564 5.178-2.449 7.801-1.496 17.466 1.972 23.196 1.088 1.726 3.673 5.524 7.142 4.074 3.06-1.243 2.38-5.178 3.264-8.63.205-.83.069-1.38.476-1.933v.138c.953 1.933 1.904 3.797 2.789 5.73 2.108 3.383 5.78 6.904 8.841 9.252 1.633 1.242 2.925 3.382 4.966 4.142v-.208h-.137c-.408-.621-1.02-.897-1.564-1.38-1.224-1.243-2.585-2.762-3.536-4.143-2.857-3.866-5.374-8.146-7.618-12.565-1.088-2.14-2.04-4.487-2.924-6.627-.409-.83-.409-2.072-1.089-2.485-1.02 1.518-2.516 2.83-3.264 4.694-1.292 2.968-1.428 6.627-1.904 10.424-.273.07-.137 0-.273.14-2.176-.554-2.924-2.832-3.74-4.765-2.041-4.901-2.381-12.772-.613-18.433.477-1.45 2.517-6.006 1.701-7.387-.408-1.312-1.769-2.071-2.517-3.107-.884-1.312-1.836-2.968-2.448-4.418-1.633-3.866-2.449-8.147-4.217-12.013-.816-1.795-2.244-3.659-3.4-5.316-1.293-1.864-2.721-3.176-3.741-5.385-.34-.759-.817-2.002-.272-2.83.136-.553.407-.76.952-.898.884-.76 3.4.207 4.284.621 2.517 1.035 4.625 2.003 6.734 3.452.952.69 1.972 2.003 3.196 2.348h1.429c2.176.483 4.624.138 6.665.759 3.605 1.173 6.87 2.9 9.794 4.764 8.91 5.73 16.255 13.876 21.22 23.61.816 1.588 1.156 3.039 1.904 4.695 1.429 3.383 3.197 6.835 4.625 10.149 1.428 3.244 2.788 6.559 4.829 9.251 1.02 1.45 5.1 2.21 6.937 2.969 1.36.62 3.47 1.174 4.693 1.933 2.312 1.449 4.625 3.107 6.801 4.694 1.089.829 4.489 2.555 4.693 3.935"/><path d="M22.737 17.072c-1.156 0-1.972.139-2.788.345v.138h.136c.544 1.105 1.496 1.865 2.176 2.831.544 1.104 1.02 2.21 1.565 3.314.067-.07.135-.138.135-.138.953-.69 1.429-1.795 1.429-3.452-.409-.483-.477-.966-.817-1.45-.407-.69-1.292-1.035-1.836-1.588"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">MySQL</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:360ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#d32f2f" d="M100 73.34V57.508c0 3.73-4.083 7.155-10.9 9.863L50 57.507v15.834l39.1 9.862c6.817-2.704 10.9-6.129 10.9-9.862"/><path fill="#d32f2f" d="M89.1 51.55c6.817-2.726 10.9-6.134 10.9-9.867V25.827C100 17.103 77.604 10 50 10 22.375 10 0 17.1 0 25.824v15.858c0 8.738 22.388 15.83 50 15.83V41.69zM50 89.165V73.34c-27.625 0-50-7.104-50-15.825V73.34c0 8.737 22.375 15.825 50 15.825"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">PHP</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:420ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#77c1d2" fill-rule="evenodd" d="M77.778 27 100 49.123 77.778 71.249 55.556 49.124z" clip-rule="evenodd"/><path fill="#2d3441" fill-rule="evenodd" d="m22.222 27 46.07 45.867H23.847L0 49.124z" clip-rule="evenodd"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">JavaScript</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:480ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#000" d="M47.385 37.804c.818-1.19 1.712-1.345 2.442-1.345.724 0 1.934.155 2.752 1.345 10.655 14.514 32.752 52.8 34.795 54.885 3.026 3.088 7.18 1.164 9.59-2.338 2.38-3.45 3.036-5.87 3.036-8.451 0-1.76-34.413-65.247-37.883-70.533C58.786 6.283 57.699 5 51.999 5h-4.267c-5.69 0-6.512 1.283-9.843 6.362C34.413 16.66 0 80.146 0 81.905c0 2.586.657 5.001 3.036 8.451 2.41 3.502 6.564 5.432 9.59 2.339 2.043-2.085 24.11-40.372 34.76-54.88z"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Expo</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:540ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><g clip-path="url(#a)"><path fill="#de4c36" d="M98.114 45.544 54.454 1.886a6.44 6.44 0 0 0-9.108 0l-9.066 9.066 11.5 11.501a7.65 7.65 0 0 1 7.869 1.834 7.66 7.66 0 0 1 1.817 7.916L68.55 43.287c2.682-.923 5.776-.326 7.918 1.82a7.66 7.66 0 0 1 0 10.836 7.662 7.662 0 0 1-12.508-8.335L53.623 37.271v27.202a7.663 7.663 0 0 1 2.026 12.288 7.66 7.66 0 0 1-10.836 0 7.663 7.663 0 0 1 2.508-12.51V36.795a7.6 7.6 0 0 1-2.508-1.672 7.66 7.66 0 0 1-1.651-8.377l-11.338-11.34L1.887 45.344a6.44 6.44 0 0 0 0 9.11l43.661 43.659a6.44 6.44 0 0 0 9.108 0l43.458-43.457a6.444 6.444 0 0 0 0-9.11"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h100v100H0z"/></clipPath></defs></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Git</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:600ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="#8cc84b" d="M46.279 1.067c2.479-1.42 5.709-1.426 8.186 0 12.464 7.042 24.931 14.074 37.393 21.12 2.343 1.321 3.911 3.93 3.887 6.63v42.371c.018 2.813-1.705 5.483-4.178 6.774-12.422 7.004-24.838 14.016-37.259 21.02-2.53 1.447-5.825 1.335-8.277-.23-3.724-2.16-7.455-4.308-11.18-6.465-.76-.453-1.619-.815-2.156-1.552.475-.64 1.324-.72 2.015-1 1.554-.495 2.982-1.288 4.41-2.058.361-.247.802-.152 1.148.069 3.185 1.826 6.342 3.705 9.537 5.513.682.394 1.372-.129 1.955-.453 12.19-6.89 24.396-13.754 36.584-20.646a1.21 1.21 0 0 0 .664-1.191c.009-13.977.002-27.957.005-41.934a1.31 1.31 0 0 0-.781-1.308C75.852 20.756 63.479 13.773 51.102 6.8a1.29 1.29 0 0 0-1.458-.002c-12.378 6.975-24.749 13.964-37.126 20.935-.506.23-.845.738-.785 1.302q.002 20.966 0 41.936a1.19 1.19 0 0 0 .673 1.176c3.303 1.873 6.61 3.733 9.916 5.6 1.861 1.002 4.148 1.597 6.199.83 1.81-.65 3.08-2.497 3.045-4.42.017-13.895-.009-27.793.013-41.686-.046-.617.54-1.127 1.14-1.069 1.586-.01 3.175-.021 4.762.005.663-.015 1.119.649 1.037 1.27-.007 13.984.017 27.968-.01 41.952.003 3.726-1.528 7.781-4.975 9.605-4.247 2.2-9.496 1.733-13.691-.376-3.632-1.813-7.098-3.952-10.666-5.894C6.697 76.68 4.983 73.999 5 71.189V28.817c-.026-2.756 1.604-5.412 4.021-6.713Q27.651 11.588 46.28 1.067"/><path fill="#8cc84b" d="M57.114 30.417c5.417-.348 11.216-.206 16.091 2.462 3.774 2.046 5.867 6.338 5.933 10.53-.105.566-.696.878-1.236.84-1.572-.003-3.144.02-4.716-.011-.667.025-1.054-.59-1.138-1.179-.451-2.006-1.545-3.993-3.434-4.96-2.898-1.452-6.26-1.38-9.42-1.349-2.308.123-4.79.322-6.744 1.68-1.5 1.027-1.957 3.102-1.421 4.773.505 1.2 1.89 1.587 3.023 1.944 6.529 1.708 13.447 1.538 19.85 3.785 2.651.916 5.245 2.697 6.152 5.472 1.187 3.72.667 8.168-1.98 11.154-2.146 2.458-5.273 3.796-8.39 4.522-4.149.925-8.454.949-12.666.538-3.962-.451-8.084-1.492-11.142-4.191-2.614-2.27-3.892-5.808-3.765-9.223.03-.576.605-.978 1.157-.93 1.583-.014 3.165-.018 4.748.001.632-.045 1.101.501 1.133 1.097.292 1.912 1.01 3.918 2.678 5.051 3.216 2.075 7.253 1.933 10.936 1.991 3.052-.135 6.477-.176 8.967-2.193 1.314-1.15 1.703-3.075 1.348-4.73-.384-1.398-1.847-2.05-3.103-2.476-6.444-2.038-13.44-1.299-19.822-3.604-2.59-.916-5.096-2.647-6.092-5.309-1.389-3.767-.752-8.427 2.172-11.313 2.852-2.87 6.968-3.976 10.881-4.372"/></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Node.js</span>
+                </div>
+
+                <div class="tech-badge group flex flex-col items-center gap-3 p-5 rounded-2xl bg-soft border border-lgray hover:border-primary/30 hover:bg-white hover:shadow-md hover:shadow-primary/10 cursor-default" data-reveal-scale style="transition-delay:660ms">
+                    <div class="w-10 h-10"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="url(#a)" d="M98.848 14.801 52.731 98.695a2.486 2.486 0 0 1-4.365.019L1.336 14.808c-1.054-1.878.525-4.153 2.617-3.773L50.12 19.43c.294.053.596.053.89-.002l45.2-8.381c2.086-.387 3.672 1.871 2.638 3.753"/><path fill="url(#b)" d="M72.111.025 37.984 6.828c-.273.054-.52.2-.703.412a1.3 1.3 0 0 0-.307.764l-2.1 36.07a1.3 1.3 0 0 0 .442 1.05 1.25 1.25 0 0 0 1.091.268l9.502-2.23c.889-.21 1.692.587 1.51 1.496l-2.824 14.064c-.19.946.684 1.755 1.592 1.474l5.87-1.813c.909-.281 1.783.53 1.59 1.477l-4.486 22.09c-.28 1.382 1.526 2.135 2.28.951l.503-.791 27.81-56.46c.465-.946-.338-2.024-1.358-1.823l-9.781 1.92c-.92.18-1.701-.69-1.442-1.605l6.384-22.513c.26-.917-.526-1.788-1.446-1.604"/><defs><linearGradient id="a" x1=".187" x2="51.038" y1="17.805" y2="85.688" gradientUnits="userSpaceOnUse"><stop stop-color="#41d1ff"/><stop offset="1" stop-color="#bd34fe"/></linearGradient><linearGradient id="b" x1="54.398" x2="64.98" y1="1.872" y2="73.224" gradientUnits="userSpaceOnUse"><stop stop-color="#ffea83"/><stop offset=".083" stop-color="#ffdd35"/><stop offset="1" stop-color="#ffa800"/></linearGradient></defs></svg></div>
+                    <span class="text-xs text-muted group-hover:text-navy transition-colors font-medium text-center">Vite</span>
+                </div>
+
             </div>
         </div>
     </section>
 
-    {{-- ===== ABOUT ===== --}}
+        {{-- ===== ABOUT ===== --}}
     <section id="tentang" class="py-24 bg-soft relative overflow-hidden">
         <div class="orb w-80 h-80 bg-primary/8 top-1/2 -right-20 opacity-50 animate-float-slow"></div>
 
@@ -441,7 +477,7 @@
                         SOLUSI NYATA<br>UNTUK UMKM<br>LOKAL
                     </h2>
                     <p class="text-muted leading-relaxed mb-5 text-sm">
-                        XGROW STUDIO lahir dari keinginan untuk membantu bisnis lokal tumbuh lewat teknologi. Kami bukan hanya vendor — kami adalah mitra pertumbuhan yang memahami tantangan nyata UMKM Indonesia.
+                        XGROW STUDIO lahir dari keinginan untuk membantu bisnis lokal tumbuh lewat teknologi. Kami bukan hanya vendor â€” kami adalah mitra pertumbuhan yang memahami tantangan nyata UMKM Indonesia.
                     </p>
                     <p class="text-muted leading-relaxed mb-8 text-sm">
                         Dengan pendekatan yang <span class="text-navy font-semibold">fresh, energetic, dan bold</span>, kami menghadirkan solusi digital yang tidak hanya bagus secara visual, tapi juga memberi dampak nyata bagi bisnis.
@@ -596,10 +632,11 @@
                 </div>
             </div>
             <div class="mt-8 pt-6 border-t border-white/10 text-center text-xs text-muted">
-                &copy; 2026 XGROW STUDIO. All rights reserved. &nbsp;·&nbsp; Subang, Jawa Barat, Indonesia
+                &copy; 2026 XGROW STUDIO. All rights reserved. &nbsp;Â·&nbsp; Subang, Jawa Barat, Indonesia
             </div>
         </div>
     </footer>
 
 </body>
 </html>
+
