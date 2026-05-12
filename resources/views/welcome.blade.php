@@ -128,14 +128,9 @@
             <div class="flex items-center justify-between h-16 lg:h-20 transition-all duration-300"
                  :class="scrolled ? 'bg-white/95 backdrop-blur-md shadow-md shadow-primary/10 rounded-b-2xl px-4' : ''">
 
-                <a href="#beranda" class="flex items-center gap-2 group">
-                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <span class="text-white font-heading text-lg leading-none">X</span>
-                    </div>
-                    <span class="font-heading text-2xl tracking-widest transition-colors duration-300"
-                          :class="scrolled ? 'text-navy' : 'text-white'">
-                        XGROW <span class="text-primary" style="color:#6B7FFF" :style="scrolled ? 'color:#241C86' : 'color:#6B7FFF'">STUDIO</span>
-                    </span>
+                <a href="#beranda" class="flex items-center group">
+                    <img x-show="!scrolled" src="{{ asset('logo-horizontal-white.png') }}" alt="XGROW STUDIO" class="h-8 w-auto transition-all duration-300 group-hover:opacity-80">
+                    <img x-show="scrolled"  src="{{ asset('logo-horizontal-primary.png') }}" alt="XGROW STUDIO" class="h-8 w-auto transition-all duration-300 group-hover:opacity-80">
                 </a>
 
                 <div class="hidden lg:flex items-center gap-8">
@@ -431,8 +426,8 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative" data-reveal-left>
-                    <div class="aspect-square max-w-md mx-auto rounded-3xl overflow-hidden border border-lgray shadow-xl shadow-primary/10">
-                        <img src="{{ asset('Foto/kokoh.png') }}" alt="Tim XGROW STUDIO" class="object-cover w-full h-full hover:scale-105 transition-transform duration-700">
+                    <div class="aspect-square max-w-md mx-auto rounded-3xl overflow-hidden border border-lgray shadow-xl shadow-primary/10 bg-soft flex items-center justify-center p-10">
+                        <img src="{{ asset('logo-vertical-primary.png') }}" alt="XGROW STUDIO" class="w-full h-full object-contain hover:scale-105 transition-transform duration-700">
                     </div>
                     <div class="absolute -bottom-4 -right-4 md:right-4 bg-primary rounded-2xl p-5 shadow-2xl shadow-primary/30 animate-float">
                         <p class="font-heading text-2xl text-white leading-tight">HERE WE</p>
@@ -589,11 +584,8 @@
     <footer class="bg-navy py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <a href="#beranda" class="flex items-center gap-2 group">
-                    <div class="w-7 h-7 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <span class="text-white font-heading text-base leading-none">X</span>
-                    </div>
-                    <span class="font-heading text-xl tracking-widest text-white">XGROW <span class="text-primary/80">STUDIO</span></span>
+                <a href="#beranda" class="flex items-center group">
+                    <img src="{{ asset('logo-horizontal-white.png') }}" alt="XGROW STUDIO" class="h-7 w-auto group-hover:opacity-80 transition-opacity">
                 </a>
                 <p class="text-xs text-muted italic">"Here We Are. Here We Grow."</p>
                 <div class="flex items-center gap-6 text-xs text-muted">
